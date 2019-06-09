@@ -1,22 +1,22 @@
 <template>
   <Page>
     <Header />
-      <GridLayout columns="*" rows="*">
-          <Button text="Button" @tap="goPage" />
-      </GridLayout>
+    <List title="My List" />
   </Page>
 </template>
 
 <script >
   import Movie from './Movie'
   import Header from '@/components/Header'
+  import List from '@/components/List'
+
   export default {
     data() {
       return {
         msg: 'Home'
       }
     },
-    components: { Header }, 
+    components: { Header, List }, 
     methods: {
       goPage() {
         this.$navigateTo(Movie);
