@@ -1,7 +1,10 @@
 import Vue from 'nativescript-vue'
+import Vuex from 'vuex'
+import { store } from './store'
 import Home from './views/Home'
 import VueDevtools from 'nativescript-vue-devtools'
 
+Vue.use(Vuex)
 if(TNS_ENV !== 'production') {
   Vue.use(VueDevtools)
 }
@@ -14,5 +17,6 @@ Vue.registerElement(
 )
 
 new Vue({
-  render: h => h('frame', [h(Home)])
+  render: h => h('frame', [h(Home)]),
+  store
 }).$start()

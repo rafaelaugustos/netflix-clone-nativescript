@@ -12,15 +12,12 @@
         />
       </StackLayout>
     </ScrollView>
-
-    <CardAnimate />
   </Page>
 </template>
 
 <script>
   import Header from '@/components/Header'
   import List from '@/components/List'
-  import CardAnimate from '@/components/CardAnimate'
 
   export default {
     data() {
@@ -83,7 +80,7 @@
         ]
       }
     },
-    components: { Header, List, CardAnimate }
+    components: { Header, List }
   }
 </script>
 
